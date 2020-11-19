@@ -2,9 +2,26 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "The one boilerplate for all",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "webpack-dev-server --hot --inline",
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "webpack --watch",
+    "dev:server": "nodemon server",
+    "start": "run-s build server",
+    "build": "webpack",
+    "server": "node server",
+    "test": "jest --watchAll"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
   },
   "repository": {
     "type": "git",
