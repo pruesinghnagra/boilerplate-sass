@@ -7,7 +7,7 @@
     "start": "run-p webpack server",
     "dev": "run-p client dev:server",
     "webpack": "webpack --config ./client/webpack.config.js",
-    "knex": "knex --knexfile server/db/knexfile.js",
+    "knex": "knex --knexfile ./server/db/knexfile.js",
     "client": "npm run webpack -- --watch",
     "server": "node index",
     "dev:server": "nodemon index",
