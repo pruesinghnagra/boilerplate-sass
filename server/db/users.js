@@ -4,9 +4,6 @@ module.exports = {
     getAllUsers
 }
 
-function getAllUsers(table, db = connection) {
-    return db('users')
-        .select()
-        .where('users', table)
-        .first()
+function getAllUsers(db = connection) {
+    return db('users').select()
 }
