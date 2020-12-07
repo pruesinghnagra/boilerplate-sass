@@ -1,6 +1,13 @@
-// Modules
-@import "./modules/colors";
-@import "./modules/typography";
+// 1 - TOOLS
+@use './1-tools/normalize';
 
-// Partials
-@import "./partials/css-reset"
+// 2 - HELPERS
+
+// 3 - BASICS
+
+// 4 - LAYOUT
+@use './4-layout/grid'
+
+// 5 - MODULES
+
+// 6 - PAGES
